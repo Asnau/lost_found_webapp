@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NavbarComponent from './components/js/Navbar';
+import Example from './components/js/carousal';
+import FirstComponent from './components/js/firstcomponent';
+import Parallex from './components/js/parallex';
+import Howitworks from './components/js/HowItWorks';
+//import Parallex1 from './components/js/parallex1';
+import FooteraboutUs from './components/js/footer-aboutus';
+import {
+} from 'reactstrap';
 import './App.css';
+import './components/style/Sticky-Navbar.css';
 
 class App extends Component {
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <NavbarComponent/>
+        <FirstComponent dataimgsrc= 'https://source.unsplash.com/random/1920x1082'/>
+        <div>
+          <Howitworks dataimgsrc= 'https://source.unsplash.com/random/1920x1081'/>
+        </div>
+        <div>
+          <Example/>
+        </div>
+        <div>
+          <Parallex dataimgsrc= 'https://source.unsplash.com/random/1920x1080'/>
+        </div>
+        <div>
+        <FooteraboutUs/>
+      </div>
       </div>
     );
   }
 }
+
+
 
 export default App;
